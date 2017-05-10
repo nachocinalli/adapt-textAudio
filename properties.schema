@@ -1,0 +1,58 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "$ref": "http://localhost/plugins/content/component/model.schema",
+  "globals": {
+    "ariaRegion": {
+      "type": "string",
+      "required": true,
+      "default": "",
+      "inputType": "Text",
+      "validators": []
+    }
+  },
+  "properties":{
+    "_supportedLayout": {
+      "type": "string",
+      "required": true,
+      "enum": ["full-width", "half-width", "both"],
+      "default": "both",
+      "editorOnly": true
+    },
+    "instruction": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the instruction text"
+    },
+    "_audio":{
+      "type":"object",
+      "required":true,
+      "title": "Audio",
+      "properties":{
+      "mp3": {
+          "type":"string",
+          "required":false,
+          "default": "",
+          "title": "MP3 Link",
+          "inputType": "Asset:audio",
+          "validators": [],
+          "help": "Link to an MP3 audio"
+        }
+      }
+    },
+    "_setCompletionOn": {
+      "type":"string",
+      "required":true,
+      "enum": ["inview", "ended"],
+      "default": "inview",
+      "title": "Set completion of Text Audio",
+      "inputType": {"type": "Select", "options":["inview", "ended"]},
+      "validators": ["required"],
+      "help": "This tells Adapt when to set this component to complete"
+    }
+  }
+}

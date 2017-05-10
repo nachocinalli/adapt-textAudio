@@ -1,0 +1,66 @@
+.textAudio-component {
+    .audio-controls {
+        .icon {
+            @transition-time: 0.3s;
+            display: block;
+            width: 0;
+            height: 0;
+            border-top: @component-padding solid transparent;
+            border-bottom: @component-padding solid transparent;
+            border-left: (@component-padding*1.2) solid @mid-grey;
+            margin: (@component-padding * 2) auto @component-padding auto;
+            position: relative;
+            z-index: 1;
+            transition: all @transition-time;
+            -webkit-transition: all @transition-time;
+            -moz-transition: all @transition-time;
+            left: (@component-padding*0.2);
+            &.play {
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: (@component-padding*-1.5);
+                    left: (@component-padding*-2.3);
+                    bottom: (@component-padding*-1.5);
+                    right: (@component-padding*-0.7);
+                    border-radius: 50%;
+                    border: (@component-padding*0.2) solid @mid-grey;
+                    z-index: 2;
+                    transition: all @transition-time;
+                    -webkit-transition: all @transition-time;
+                    -moz-transition: all @transition-time;
+                }
+                &:after {
+                    content: '';
+                    opacity: 0;
+                    transition: opacity (@transition-time * 2);
+                    -webkit-transition: opacity (@transition-time * 2);
+                    -moz-transition: opacity (@transition-time * 2);
+                }
+                &:hover,
+                &:focus {
+                    &:before {
+                        transform: scale(1.1);
+                        -webkit-transform: scale(1.1);
+                        -moz-transform: scale(1.1);
+                    }
+                }
+            }
+            &.pause {
+                border-color: transparent;
+                &:after {
+                    content: '';
+                    opacity: 1;
+                    width: (@component-padding);
+                    height: (@component-padding*1.6);
+                    background: @mid-grey;
+                    position: absolute;
+                    right: (@component-padding*0.1);
+                    top: (@component-padding*-0.8);
+                    border-left: (@component-padding*0.4) solid @mid-grey;
+                    box-shadow: inset (@component-padding*0.6) 0 0 0 @component-background-color;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "adapt-textAudio",
+  "version": "1.0.8",
+  "framework": "^2.0.0",
+  "homepage": "",
+  "issues": "",
+  "displayName" : "Text Audio",
+  "component" : "textAudio",
+  "description": "A simple textAudio component",
+  "main": "/js/adapt-textAudio.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-component"
+  ],
+  "license": "GPLv3"
+}
