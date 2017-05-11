@@ -5,9 +5,9 @@
 ## Prerequisites
 
 * Required [adapt-audio](https://github.com/cgkineo/adapt-audio)
-To add audio completed trigger:
-
-1. Modify adapt-audio.js
+    
+    To add audio completed trigger:
+ 1. Modify adapt-audio.js
 ```
 onAudioEnded: function() {
     if (this.$active) {
