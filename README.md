@@ -2,10 +2,11 @@
 
 **TextAudio** is a *presentation component* 
 
-## Limitations
+## Prerequisites
 
-* **Prerequisites**: This library required [adapt-audio](https://github.com/cgkineo/adapt-audio)
-* To add audio completed trigger:
+* Required [adapt-audio](https://github.com/cgkineo/adapt-audio)
+To add audio completed trigger:
+
 1. Modify adapt-audio.js
 ```
 onAudioEnded: function() {
